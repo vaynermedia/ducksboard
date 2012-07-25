@@ -28,7 +28,7 @@ module Ducksboard
 
     def update(data=nil)
       @data = data if data
-      self.class.post('/' + id.to_s,
+      self.class.post(PUSH_URI + id.to_s,
         :basic_auth => auth,
         :body => @data.to_json)
     end
@@ -59,7 +59,7 @@ module Ducksboard
 
     private
 
-    PUSH_URI = "https://push.ducksboard.com/v"
+    PUSH_URI = "https://push.ducksboard.com/v/"
     PULL_URI = "https://pull.ducksboard.com/values"
 
     def auth()
