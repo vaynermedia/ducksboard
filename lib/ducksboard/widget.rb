@@ -59,7 +59,7 @@ module Ducksboard
 
     private
 
-    PUSH_URI = "https://push.ducksboard.com/values"
+    PUSH_URI = "https://push.ducksboard.com/v"
     PULL_URI = "https://pull.ducksboard.com/values"
 
     def auth()
